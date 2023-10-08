@@ -22,6 +22,6 @@
     "examples": [
     ],
     "dependencies": {
-        // "EmbedMatrix": "https://github.com/DaiGuard/EmbedMatrix#main"
+        "EmbedMatrix": "https://github.com/DaiGuard/EmbedMatrix#main"
     }
 }
