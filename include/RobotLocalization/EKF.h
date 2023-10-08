@@ -13,7 +13,7 @@ class EKF
         /**
          * @brief EKFコンストラクタ
          * 
-         * @param x: [x, y, th, x', y', th']
+         * @param x: 初期状態 [x, y, th, x', y', th']
          * @param P: 状態の分散 
          * @param Q: 状態方程式の分散
          * @param R: 観測方程式の分散
@@ -28,8 +28,8 @@ class EKF
         /**
          * @brief 自己位置更新
          * 
-         * @param x: [x, y, th, x', y', th']
-         * @param y: [v, arx, ary, w]
+         * @param x: 現在状態 [x, y, th, x', y', th']
+         * @param y: センサー情報 [v, arx, ary, w]
          */
         void update(float* x, float* y, float dt, float* x_new);
 
