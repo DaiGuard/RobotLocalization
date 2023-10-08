@@ -78,19 +78,27 @@
 
 ```math
 \boldsymbol{\check{x}_{k+1}}=\boldsymbol{f}\cdot\boldsymbol{x_k} + \boldsymbol{u_k}
-\\
+```
+
+```math
 \boldsymbol{\check{P}_{k+1}}=\boldsymbol{F_k}\boldsymbol{P_k}\boldsymbol{F_k}^\top+\boldsymbol{Q_k}
 ```
 
 #### 更新ステップ
 
 ```math
-\boldsymbol{S_k}=\boldsymbol{H_k}\boldsymbol{\check{P}_{k+1}}\boldsymbol{H_k}^\top+\boldsymbol{R_k} \\
+\boldsymbol{S_k}=\boldsymbol{H_k}\boldsymbol{\check{P}_{k+1}}\boldsymbol{H_k}^\top+\boldsymbol{R_k}
+```
+
+```math
 \boldsymbol{K_k}=\boldsymbol{\check{P}_{k+1}}\boldsymbol{H_k}^\top\boldsymbol{S_k}^{-1} \\
 ```
 
 ```math
-\boldsymbol{x_{k+1}}=\boldsymbol{\check{x}_{k+1}}+\boldsymbol{K_k}(\boldsymbol{y_k}-\boldsymbol{h}\boldsymbol{\check{x}_{k+1}}) \\
+\boldsymbol{x_{k+1}}=\boldsymbol{\check{x}_{k+1}}+\boldsymbol{K_k}(\boldsymbol{y_k}-\boldsymbol{h}\boldsymbol{\check{x}_{k+1}})
+```
+
+```math
 \boldsymbol{P_{k+1}}=(\boldsymbol{I}-\boldsymbol{K_k}\boldsymbol{H_k})\boldsymbol{\check{P}_{k+1}}
 ```
 
