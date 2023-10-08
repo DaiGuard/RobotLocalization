@@ -14,7 +14,7 @@
 今回使用する状態方程式を以下に示す
 
 ```math
-\bm{x_{k+1}} = \bm{f} \cdot \bm{x_k} + \bm{u_k}
+\boldsymbol{x_{k+1}} = \bm{f} \cdot \bm{x_k} + \bm{u_k}
 ```
 
 ```math
