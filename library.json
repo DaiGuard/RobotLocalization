@@ -1,0 +1,27 @@
+{
+    "name": "RobotLocalization",
+    "version": "0.0.1",
+    "description": "robot localization library",
+    "keywords": ["Arduino", "EKF"],
+    "authors": {
+        "name": "DaiGuard",
+        "email": "dai_guard@gmail.com",
+        "uri": "https://github.com/DaiGuard",
+        "maintainer": true
+    },
+    "licence": "MIT",
+    "frameworks": [
+        "Arduino"
+    ],
+    "platforms": [
+        "espressif32"
+    ],
+    "headers": [
+
+    ],
+    "examples": [
+    ],
+    "dependencies": {
+        // "EmbedMatrix": "https://github.com/DaiGuard/EmbedMatrix#main"
+    }
+}
