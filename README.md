@@ -14,11 +14,11 @@
 今回使用する状態方程式を以下に示す
 
 ```math
-\boldsymbol{x_{k+1}} = \bm{f} \cdot \bm{x_k} + \bm{u_k}
+\boldsymbol{x_{k+1}} = \boldsymbol{f} \cdot \boldsymbol{x_k} + \boldsymbol{u_k}
 ```
 
 ```math
-\bm{x}=\begin{pmatrix}
+\boldsymbol{x}=\begin{pmatrix}
         x \\
         y \\
         \theta \\
@@ -29,7 +29,7 @@
 
 \quad
 
-\bm{f}=\begin{bmatrix}
+\boldsymbol{f}=\begin{bmatrix}
         1 & 0 & 0 & \Delta{t} & 0 & 0 \\
         0 & 1 & 0 & 0 & \Delta{t} & 0 \\
         0 & 0 & 1 & 0 & 0 & \Delta{t} \\
@@ -40,7 +40,7 @@
 
 \quad
 
-\bm{u}=\begin{pmatrix}
+\boldsymbol{u}=\begin{pmatrix}
         \frac{\Delta{t}^2}{2}(a_{rx}\cos{\theta}-a_{ry}\sin{\theta}) \\
         \frac{\Delta{t}^2}{2}(a_{rx}\sin{\theta}+a_{ry}\cos{\theta}) \\
         0 \\
@@ -53,11 +53,11 @@
 今回使用する観測方程式を以下に示す
 
 ```math
-\bm{y}=\bm{h}\cdot\bm{x}
+\boldsymbol{y}=\boldsymbol{h}\cdot\boldsymbol{x}
 ```
 
 ```math
-\bm{y}=\begin{pmatrix}
+\boldsymbol{y}=\begin{pmatrix}
     v\cos{\theta} \\
     v\sin{\theta} \\
     w
@@ -65,7 +65,7 @@
 
 \quad
 
-\bm{h}=\begin{bmatrix}
+\boldsymbol{h}=\begin{bmatrix}
     0 & 0 & 0 & 1 & 0 & 0 \\
     0 & 0 & 0 & 0 & 1 & 0 \\
     0 & 0 & 0 & 0 & 0 & 1
@@ -77,21 +77,21 @@
 #### 予測ステップ
 
 ```math
-\bm{\check{x}_{k+1}}=\bm{f}\cdot\bm{x_k} + \bm{u_k}
+\boldsymbol{\check{x}_{k+1}}=\boldsymbol{f}\cdot\boldsymbol{x_k} + \boldsymbol{u_k}
 \\
-\bm{\check{P}_{k+1}}=\bm{F_k}\bm{P_k}\bm{F_k}^\top+\bm{Q_k}
+\boldsymbol{\check{P}_{k+1}}=\boldsymbol{F_k}\boldsymbol{P_k}\boldsymbol{F_k}^\top+\boldsymbol{Q_k}
 ```
 
 #### 更新ステップ
 
 ```math
-\bm{S_k}=\bm{H_k}\bm{\check{P}_{k+1}}\bm{H_k}^\top+\bm{R_k} \\
-\bm{K_k}=\bm{\check{P}_{k+1}}\bm{H_k}^\top\bm{S_k}^{-1} \\
+\boldsymbol{S_k}=\boldsymbol{H_k}\boldsymbol{\check{P}_{k+1}}\boldsymbol{H_k}^\top+\boldsymbol{R_k} \\
+\boldsymbol{K_k}=\boldsymbol{\check{P}_{k+1}}\boldsymbol{H_k}^\top\boldsymbol{S_k}^{-1} \\
 ```
 
 ```math
-\bm{x_{k+1}}=\bm{\check{x}_{k+1}}+\bm{K_k}(\bm{y_k}-\bm{h}\bm{\check{x}_{k+1}}) \\
-\bm{P_{k+1}}=(\bm{I}-\bm{K_k}\bm{H_k})\bm{\check{P}_{k+1}}
+\boldsymbol{x_{k+1}}=\boldsymbol{\check{x}_{k+1}}+\boldsymbol{K_k}(\boldsymbol{y_k}-\boldsymbol{h}\boldsymbol{\check{x}_{k+1}}) \\
+\boldsymbol{P_{k+1}}=(\boldsymbol{I}-\boldsymbol{K_k}\boldsymbol{H_k})\boldsymbol{\check{P}_{k+1}}
 ```
 
 
